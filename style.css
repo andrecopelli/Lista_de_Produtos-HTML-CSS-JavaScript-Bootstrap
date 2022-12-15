@@ -1,0 +1,183 @@
+/*Usado para setar as variáveis as serem usadas através de JavaScript para habilitar o dark mode */
+:root{
+    --bg: linear-gradient(90deg, #fdedef 0%, #abd6ff 100%);
+    --bg-cards: #fff;
+    --font-color: rgb(59, 59, 59);
+    --table-border: #ccc;
+    --table-head: rgb(218, 218, 218);
+}
+
+/*Quando o switch do checkbox dark mode for acionado, troca a cor das variáveis para essas*/
+.dark-mode:root{
+    --bg: linear-gradient(90deg, #36050b 0%, #001d38 100%);
+    --bg-cards: rgb(100, 93, 93);
+    --font-color: rgb(224, 224, 224);
+    --input-placeholder-color: rgb(56, 53, 53);
+    --table-border: rgb(236, 208, 208);
+    --table-head: rgb(255, 116, 116);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--font-color);
+}
+
+body {
+    background: var(--bg);
+    font-family: 'Inconsolata', monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    border: 2px solid var(--bg-cards);
+    padding: 30px 40px;
+    border-radius: 10px;
+    min-width: 500px;
+}
+
+.cabecalho{
+    font-weight: 600;
+    color: var(--font-color);
+}
+
+.coluna-botao{
+    display: flex;
+    align-items: center;
+}
+
+input{
+    flex: 3;
+    width: 400px;
+    font-size: 1rem;
+    border: 2px solid;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 12px;
+    font-weight: 500;
+    color: var(--input-placeholder-color);
+}
+
+input::placeholder{
+    color: var(--input-placeholder-color);
+}
+
+input:focus{
+    outline: none;
+    border-color: #41b883;
+}
+
+.novo-produto{
+    background-color:var(--bg-cards);
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    display: flex;
+}
+
+.botao-adicionar{
+    flex: 1;
+    border-radius: 10px;
+    font-weight: 500;
+    transition: all ease 0.5s;
+    font-size: 1rem;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    border: none;
+    background-color: #41b883;
+    color: #fff;
+    padding: 12px;
+    cursor: pointer;
+}
+
+.botao-adicionar:hover{
+    transform:translateY(-10px);
+    cursor:pointer;
+}
+
+.lista-compras{
+    background-color:var(--bg-cards);
+    padding: 30px 20px;
+    margin-top: 50px;
+    border-radius: 10px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.coluna-total{
+    background-color: var(--bg-cards);
+    padding: 23px;
+    margin-top: 50px;
+    border-radius: 10px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.coluna-sobre{
+    background-color:  var(--bg-cards);
+    padding: 10px;
+    margin-top: 50px;
+    border-radius: 10px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.coluna-dark{
+    background-color:  var(--bg-cards);
+    padding: 10px;
+    margin-top: 50px;
+    border-radius: 10px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode{
+    margin-top: 20px;
+}
+
+table{
+    border-collapse: collapse;
+    border: 2px solid var(--table-border);
+    width: 100%;
+}
+
+table th{
+    background-color: var(--table-head);
+}
+
+table td{
+    padding: 10px;
+}
+
+table td img{
+    width: 22px;
+}
+
+.info{
+    width: 65px;
+}
+
+.icone{
+    cursor: pointer;
+    transition: all ease 1s;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.363);
+}
+
+.icone:hover{
+    transform:translateY(-10px);
+}
+
+.lixeira{
+    cursor: pointer;
+    transition: all ease 1s;
+    text-align: center;
+}
+
+.lixeira:hover { 
+    transform:translateY(-10px);
+    cursor: pointer;
+}
+
+.center{
+    text-align: center;
+}

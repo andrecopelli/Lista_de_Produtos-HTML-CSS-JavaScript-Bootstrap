@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <title>Lista de Compras - André Copelli</title>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="row cabecalho">
+            <div class="col mb-4 mt-3 text-center">
+                <h1>LISTA DE COMPRAS - TROPTECH</h1>
+            </div>
+        </div>
+        <div class="row novo-produto">
+            <div class="col">
+                <input autofocus type="text" id="produto" class="input-nome m-2" placeholder="Digite aqui o nome do seu produto..." required>
+                <input type="number" id="quantidade" class="input-quantidade m-2" placeholder="Digite a quantidade..." required>
+                <input type="number" id="preco" class="input-preco  m-2" placeholder="Digite o valor do produto..." required>
+            </div>
+            <div class="col coluna-botao">
+                <button class="botao-adicionar btn btn-success" onclick="produto.adicionar()">Adicionar</button>
+            </div>
+        </div>
+        <div class="row lista-compras">
+            <div class="col">
+                <table>
+                    <thead>
+                        <th class="center col-1">Id</th>
+                        <th class="center col-4">Nome</th>
+                        <th class="center col-1">Quantidade</th>
+                        <th class="center col-1">Preço Unitário</th>
+                        <th class="center col-1">Excluir</th>
+                    </thead>
+                    <tbody id="tbody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row total justify-content-between align-items-center text-center">
+            <div class="col-6 coluna-total">
+                <h4>Total R$: 0</h4>
+            </div>
+            <div class="col-2 coluna-dark text-center">
+                <input class="form-check-input dark-mode p-2" type="checkbox" id="switch">
+                <label class="form-check-label" for="switch"><img src="./dark-mode.png" class="icone info" alt="ícone contendo um sol e uma lua para representar a troca para o modo escuro"></label>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
